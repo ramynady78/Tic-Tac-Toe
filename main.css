@@ -113,7 +113,7 @@ h4{
     font-size: 20px;
     font-weight: bold;
     border-radius: 6px;
-    width: 150px;
+    width: 160px;
     color: #eee;
 }
 
@@ -289,10 +289,11 @@ h4{
 footer{
     height: 50px;
     max-width: 900px;
-    margin: 0 auto 5px;
-    position: absolute;
-    left: calc(50% - 90px);
-    bottom: -70px ;
+    margin: 20px auto 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .social-icons {
