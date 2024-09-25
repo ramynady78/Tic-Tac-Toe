@@ -165,4 +165,8 @@ cells.forEach((cell,index) => {
 
 });
 
+function resetPage(){
+    window.location.reload();
+}
+
 checkWinner();
