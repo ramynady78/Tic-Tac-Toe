@@ -1,0 +1,337 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    background-color: #954824;
+    margin: 0;
+}
+h1{
+    max-width: 330px;
+    color: black;
+    background-color: #eba161;
+    text-align: center;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 6px;
+}
+.control-bar{
+    margin: 10px auto;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+
+}
+.control-bar .choose-symbol-players{
+    display: flex;
+    justify-content: center;
+    transition: .3s;
+    
+
+}
+.control-bar .choose-symbol-players div.active{
+    border: 6px solid green;
+
+}
+
+.control-bar .choose-symbol-players .player-1 input{
+    color: #1a73e8;
+}
+.control-bar .choose-symbol-players .player-2 input{
+    color: #ffff;
+}
+
+.control-bar .choose-symbol-players .player-1,
+.control-bar .choose-symbol-players .player-2{
+    border: 4px solid #eba161;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: .5s linear;
+}
+
+.control-bar .choose-symbol-players .symbol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.control-bar .choose-symbol-players span{
+    font-size: 45px;
+    width: 60px;
+    background-color: #eba161;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h4{
+    background-color: #eba161;
+    padding: 10px;
+    margin: -10px -10px 10px;
+    text-align: center;
+    color: black;
+}
+.control-bar .choose-symbol-players input{
+    border: none;
+    padding: 10px;
+    width: 50px;
+    outline: none;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    height: 50px;
+    background-color: #eba161;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+
+}
+.control-bar .choose-symbol-players input:disabled{
+    background-color: inherit;
+}
+.buttons{
+    display: flex;
+    max-width: 330px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+}
+.buttons button{
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    width: 150px;
+    color: #eee;
+}
+
+
+.buttons .reset{
+    background-color: #455963;
+    
+}
+ .buttons .reset:hover{
+    background-color: #5f7b89;
+    
+}
+.buttons .defuilt{
+    background-color: #ff4726;
+
+}
+ .buttons .defuilt:hover{
+    background-color: #e83423;
+
+}
+
+.score{
+    display: flex;
+    max-width: 330px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    padding:20px;
+    border: 4px solid #eba161;
+    border-radius: 6px;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.score p{
+    padding: 10px;
+    background-color: #eba161;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+.score .player-one-score{
+    color: #1a73e8;
+    
+}
+.score .player-two-score{
+    color: #ffff;
+}
+.score button{
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: .3s;
+    background-color: #ff4726;
+    color: white;
+
+}
+
+.score button:hover{
+    background-color: #e83423;
+}
+
+.board{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3 , 100px);
+    grid-template-rows: repeat(3 , 100px);
+    gap: 10px;
+    justify-content: center;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+
+}
+.cell{
+    background-color: #492412;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 6px;
+
+}
+.cell.disabled{
+    cursor: no-drop !important;
+}
+.cell:hover{
+    background-color: #6f361b;
+}
+.player-one{
+    color: #1a73e8;
+}
+.player-two{
+    color: #ffff;
+}
+
+.reset-game{
+    display: none;
+    width: 350px;
+    background-color: #c57427;
+    position: absolute;
+    top: 500px;
+    left: calc(50% - 175PX);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.reset-game p{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+.reset-game p span{
+    color: white;
+    margin: 0 5px;
+}
+
+
+.reset-game .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    gap: 15px;
+    
+}
+.reset-game .buttons button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    color: white;
+    border-radius: 10px;
+}
+.reset-game .buttons button.reset{
+    background-color: #455963;
+    
+}
+.reset-game .buttons button.reset:hover{
+    background-color: #5f7b89;
+    
+}
+.reset-game .buttons button.close{
+    background-color: #ff4726;
+
+}
+.reset-game .buttons button.close:hover{
+    background-color: #e83423;
+
+}
+
+footer{
+    height: 50px;
+    max-width: 900px;
+    margin: 0 auto 5px;
+    position: absolute;
+    left: calc(50% - 90px);
+    bottom: -70px ;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition:0.3s;
+    padding: 20px;
+    background-color: white;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+.vk {
+    color: #4C75A3;
+    border: 2px solid #4C75A3;
+
+}
+
+.telegram {
+    color: #0088cc;
+    border: 2px solid #0088cc;
+}
+
+.github {
+    color: #333;
+    border: 2px solid #333;
+}
+
+

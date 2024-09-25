@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="buttons">
+        <button class="defuilt">Defuilt Game</button>
+        <button class="reset" onclick="resetGame()">Reset</button>
+    </div>
+    <div class="score">
+        <p class="player-one-score">0</p>
+        <button class="new-score" onclick="newScore()"><span class="material-symbols-outlined">restart_alt</span></button>
+        <p class="player-two-score">0</p>
+    </div>
+    <div class="control-bar">
+        <div class="choose-symbol-players">
+            <div class="player-1">
+                <h4>Player One </h4>
+                <div class="symbol">
+                    <span class="material-symbols-outlined" id="player-one-icon">person</span>
+                    <input type="text" placeholder="" maxlength="1" class="Player-one"/>
+                </div>
+            </div>
+            <div class="player-2">
+                <h4>Player Two </h4>
+               <div class="symbol">
+                    <span class="material-symbols-outlined" id="player-two-icon">person</span>
+                    <input type="text" placeholder="" maxlength="1" class="Player-two"/>
+               </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="board"></div>
+    <div class="reset-game">
+        <p class="message">the player is <span>Ramy tets</span> Winner</p>
+        <div class="buttons">
+            <button class="close">Close</button>
+            <button class="reset" onclick="resetGame()">Reset</button>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="https://vk.com/id704406318" class="vk" target="_blank"><i class="fab fa-vk"></i></a>
+            <a href="https://t.me/ramynady8" class="telegram" target="_blank" ><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://github.com/ramynady78" class="github" target="_blank" ><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
